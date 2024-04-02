@@ -1,0 +1,4 @@
+name: TaweeratCoordinate
+version: '${project.version}'
+main: com.taweerat.taweeratcoordinate.TaweeratCoordinate
+api-version: '1.20'
