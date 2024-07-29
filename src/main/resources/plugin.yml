@@ -1,0 +1,8 @@
+name: TaweeratCoordinate
+version: '1.0'
+main: com.taweerat.taweeratCoordinate.TaweeratCoordinate
+api-version: '1.21'
+commands:
+  tc:
+    description: "KUY KUY KUY"
+    usage: /<command>
