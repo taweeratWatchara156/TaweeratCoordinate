@@ -4,9 +4,11 @@ import com.taweerat.taweeratCoordinate.TaweeratCoordinate;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,6 +30,14 @@ public class Coordinate implements Listener {
             instance.setRun(run);
 
             instance.getRun().get(uuid).runTaskTimer(instance, 0, 0);
+        }
+    }
+
+    @EventHandler
+    public void PlayerReloadServer(PlayerCommandPreprocessEvent event){
+        if(event.getMessage().equalsIgnoreCase("/reload confirm")){
+            run = new HashMap<>();
+            instance.saveData(new ArrayList<>());
         }
     }
 }
